@@ -1,5 +1,5 @@
 #! /usr/bin/env python3
-
+# coding=utf8
 import sys
 
 sys.stdout = open('/Users/Gray/Desktop/muha.txt', 'w')
@@ -44,11 +44,10 @@ for cluster in clusters:
     for taxon in taxa:
         n = 0
         for component in clusters[cluster]:
-            if component.endswith(taxon):
+            if component.endswith(taxon): # имя вида должно быть записано вконце!!!!!!!!!!!!!!!
                 n += 1
         temp.append(n)
 #    if temp.count(0) < 4:
-    if all(temp):
-        print(seqs[cluster - 1][0], end='\t')
-        print(cluster, end='\t')
-        print('\t'.join(map(str, temp)))
+    print(seqs[cluster - 1][0], end='\t')
+    print(cluster, end='\t')
+    print('\t'.join(map(str, temp)))
