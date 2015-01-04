@@ -44,7 +44,7 @@ for cluster in clusters:
     for taxon in taxa:
         n = 0
         for component in clusters[cluster]:
-            if component.endswith(taxon): # имя вида должно быть записано вконце!!!!!!!!!!!!!!!
+            if component.endswith(taxon): # имя вида должно быть записано в конце!!!!!!!!!!!!!!!
                 n += 1
         temp.append(n)
 #    if temp.count(0) < 4:
